@@ -120,7 +120,7 @@ var Hashtable=(function(){var w="undefined",f="function",k="string",j="equals",t
 	var nfLocales = new Hashtable();
 	
 	var nfLocalesLikeUS = [ 'ae','au','ca','cn','eg','gb','hk','il','in','jp','sk','th','tw','us' ];
-	var nfLocalesLikeDE = [ 'at','br','de','dk','es','gr','it','pt','tr','vn' ];
+	var nfLocalesLikeDE = [ 'at','br','de','dk','es','gr','it','nl','pt','tr','vn' ];
 	var nfLocalesLikeFR = [ 'cz','fi','fr','ru','se' ];
 	var nfLocalesLikeCH = [ 'ch' ];
 	
@@ -397,9 +397,9 @@ var Hashtable=(function(){var w="undefined",f="function",k="string",j="equals",t
 		if (number) {
 			if (writeBack) {
 				if (jQuery(this).is(":input"))
-					jQuery(this).val(number);
+					jQuery(this).val(number.toString());
 				else
-					jQuery(this).text(number);
+					jQuery(this).text(number.toString());
 			}
 			if (giveReturnValue)
 				return number;

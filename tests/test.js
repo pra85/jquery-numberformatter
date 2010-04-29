@@ -64,9 +64,9 @@ $(document).ready(function() {
 		
 		// apply formatting
 		output.text(input);
-		if (format && locale && nanForceZero) {
+		if (format && locale && nanForceZero)
 			output.formatNumber({ format: format, locale: locale, nanForceZero: nanForceZero });
-		} else if (format && locale)
+		else if (format && locale)
 			output.formatNumber({format:format, locale:locale});
 		else if (format)
 			output.formatNumber({format:format});

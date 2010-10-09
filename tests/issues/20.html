@@ -6,19 +6,17 @@
 	
 	<script type="text/javascript">
 	    $(document).ready(function () {
-			$('span').parseNumber({format:"#.00",locale:'nl'}, true);
-	        $('span').formatNumber({format:"#.00",locale:'nl'});
+	        $('span').formatNumber({format:"###,##0.00###"});
 	    });
 	</script>
 </head>
 <body>
-	<p>
-		<a href="http://code.google.com/p/jquery-numberformatter/issues/detail?id=17">Issue #17</a>
-	</p>
-	
-	<span>1,9999</span>
-	<p>
-		Expected: 2,00
-	</p>
-</body>
+<p>
+	<a href="http://code.google.com/p/jquery-numberformatter/issues/detail?id=20">Issue #20</a>
+</p>
+
+<span>1000000.12345</span>
+<p>
+	Expected: 1,000,000.12345
+</p>
 </html>

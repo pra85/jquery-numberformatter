@@ -6,19 +6,23 @@
 	
 	<script type="text/javascript">
 	    $(document).ready(function () {
-			$('span').parseNumber({format:"#.00",locale:'nl'}, true);
-	        $('span').formatNumber({format:"#.00",locale:'nl'});
+	        $('span p').formatNumber({format:'Price: #,###.00 €'});
+			$('div').append($('<p>1</p><p>2</p><p>3</p>').formatNumber({format:'Price: #,###.00 €'}));
 	    });
 	</script>
 </head>
 <body>
 	<p>
-		<a href="http://code.google.com/p/jquery-numberformatter/issues/detail?id=17">Issue #17</a>
+		<a href="http://code.google.com/p/jquery-numberformatter/issues/detail?id=24">Issue #24</a>
 	</p>
 	
-	<span>1,9999</span>
+	From DOM
+	<span><p>1</p><p>2</p><p>3</p></span>
+	From JS
+	<div></div>
 	<p>
-		Expected: 2,00
+		Expected:
+		<p>Price: 1.00 €</p><p>Price: 2.00 €</p><p>Price: 3.00 €</p>
 	</p>
 </body>
 </html>

@@ -336,6 +336,9 @@
 				}
 			}
 		}
+		
+		if (!onePortion && onesFormat.indexOf('0', onesFormat.length - 1) !== -1)
+   			onePortion = '0';
 
 		returnString = onePortion + returnString;
 

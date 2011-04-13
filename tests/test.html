@@ -14,9 +14,9 @@
 		color: #ff0000;
 	}
 	</style>
-	<script type="text/javascript" src="../lib/jquery-1.5.2.min.js"></script>
-	<script type="text/javascript" src="../lib/jshashtable-2.1.js"></script>
-	<script type="text/javascript" src="../src/jquery.numberformatter.js"></script>
+	<script type="text/javascript" src="../lib/jquery.min.js"></script> <!-- 1.5.2 -->
+	<script type="text/javascript" src="../lib/jshashtable.js"></script> <!-- 2.1 -->
+	<script type="text/javascript" src="../src/jquery.numberformatter.js"></script> <!-- 1.2.2 -->
 	<script src="test.js"></script>
 </head>
 <body>
@@ -151,6 +151,14 @@
 		<tr class="formatNumberTest"> <td class="id">formatNumberTest4</td>
 			<td class="locale">us</td> <td class="format">#</td> <td class="input">0</td> <td class="output">n/a</td> <td class="ref"></td> <td class="result">n/a</td>
 			<td class="nanForceZero">false</td>
+		</tr>
+		
+		<!-- Issue 32 -->
+		<tr class="formatNumberTest"> <td class="id">formatNumberTest5</td>
+			<td class="locale">us</td> <td class="format">#,##0</td> <td class="input">0</td> <td class="output">n/a</td> <td class="ref">0</td> <td class="result">n/a</td>
+		</tr>
+		<tr class="formatNumberTest"> <td class="id">formatNumberTest6</td>
+			<td class="locale">us</td> <td class="format">#,##0.00</td> <td class="input">0</td> <td class="output">n/a</td> <td class="ref">0.00</td> <td class="result">n/a</td>
 		</tr>
 	</table>
 	

@@ -320,7 +320,7 @@
 			onesFormat = options.format.substring(0, options.format.indexOf("."));
 
 		var onePortion = "";
-		if (!(ones == 0 && onesFormat.substr(-1,1) == '#') || forcedToZero) {
+		if (!(ones == 0 && onesFormat.substr(onesFormat.length - 1) == '#') || forcedToZero) {
 			// find how many digits are in the group
 			var oneText = new String(Math.abs(ones));
 			var groupLength = 9999;

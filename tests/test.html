@@ -73,7 +73,7 @@
 			<td class="locale">us</td><td class="format">#</td><td class="input">4335.80</td><td class="output">n/a</td><td class="ref">4336</td><td class="result">n/a</td>
 		</tr>
 		<tr class="formatTextTest"><td class="id">formatTextTest8</td>
-			<td class="locale">us</td><td class="format">0000</td><td class="input">566</td><td class="output">n/a</td><td class="ref">566</td><td class="result">n/a</td>
+			<td class="locale">us</td><td class="format">0000</td><td class="input">566</td><td class="output">n/a</td><td class="ref">0566</td><td class="result">n/a</td>
 		</tr>
 		<tr class="formatTextTest"><td class="id">formatTextTest9</td>
 			<td class="locale">us</td><td class="format">0</td><td class="input">566</td><td class="output">n/a</td><td class="ref">566</td><td class="result">n/a</td>
@@ -168,6 +168,20 @@
 		<tr class="formatNumberTest"> <td class="id">formatNumberTest8</td>
 			<td class="locale">us</td> <td class="format">#,##0.0000</td> <td class="input">0.00005</td> <td class="output">n/a</td> <td class="ref">0.0001</td> <td class="result">n/a</td>
 		</tr>
+		
+		<!-- Issue 35 -->
+		<tr class="formatNumberTest"> <td class="id">formatNumberTest9</td>
+			<td class="locale">us</td> <td class="format">#000.0</td> <td class="input">10.456</td> <td class="output">n/a</td> <td class="ref">010.5</td> <td class="result">n/a</td>
+		</tr>
+		<tr class="formatNumberTest"> <td class="id">formatNumberTest10</td>
+			<td class="locale">us</td> <td class="format">#,##0.0</td> <td class="input">1000</td> <td class="output">n/a</td> <td class="ref">1,000.0</td> <td class="result">n/a</td>
+		</tr>
+		<tr class="formatNumberTest"> <td class="id">formatNumberTest10</td>
+			<td class="locale">us</td> <td class="format">0#,##0.0</td> <td class="input">1000</td> <td class="output">n/a</td> <td class="ref">01,000.0</td> <td class="result">n/a</td>
+		</tr>
+		<tr class="formatNumberTest"> <td class="id">formatNumberTest10</td>
+			<td class="locale">us</td> <td class="format">0#,##0.0</td> <td class="input">1000000</td> <td class="output">n/a</td> <td class="ref">1,000,000.0</td> <td class="result">n/a</td>
+		</tr>
 	</table>
 	
 	<h2>German Locale</h2>
@@ -221,7 +235,7 @@
 			<td class="locale">de</td> <td class="format">#</td> <td class="input">4335.80</td> <td class="output">n/a</td> <td class="ref">4336</td> <td class="result">n/a</td>
 	    </tr>
 		<tr class="formatTextTest"> <td class="id">formatTextTestDe8</td>
-			<td class="locale">de</td> <td class="format">0000</td> <td class="input">566</td> <td class="output">n/a</td> <td class="ref">566</td> <td class="result">n/a</td>
+			<td class="locale">de</td> <td class="format">0000</td> <td class="input">566</td> <td class="output">n/a</td> <td class="ref">0566</td> <td class="result">n/a</td>
 	    </tr>
 		<tr class="formatTextTest"> <td class="id">formatTextTestDe9</td>
 			<td class="locale">de</td> <td class="format">0</td> <td class="input">566</td> <td class="output">n/a</td> <td class="ref">566</td> <td class="result">n/a</td>
@@ -293,7 +307,7 @@
 			<td class="locale">fr</td> <td class="format">#</td> <td class="input">4335.80</td> <td class="output">n/a</td> <td class="ref">4336</td> <td class="result">n/a</td>
 	    </tr>
 		<tr class="formatTextTest"> <td class="id">formatTextTestFr8</td>
-			<td class="locale">fr</td> <td class="format">0000</td> <td class="input">566</td> <td class="output">n/a</td> <td class="ref">566</td> <td class="result">n/a</td>
+			<td class="locale">fr</td> <td class="format">0000</td> <td class="input">566</td> <td class="output">n/a</td> <td class="ref">0566</td> <td class="result">n/a</td>
 	    </tr>
 		<tr class="formatTextTest"> <td class="id">formatTextTestFr9</td>
 			<td class="locale">fr</td> <td class="format">0</td> <td class="input">566</td> <td class="output">n/a</td> <td class="ref">566</td> <td class="result">n/a</td>
@@ -357,7 +371,7 @@
 			<td class="locale">ch</td> <td class="format">#</td> <td class="input">4335.80</td> <td class="output">n/a</td> <td class="ref">4336</td> <td class="result">n/a</td>
 	    </tr>
 		<tr class="formatTextTest"> <td class="id">formatTextTestCh8</td>
-			<td class="locale">ch</td> <td class="format">0000</td> <td class="input">566</td> <td class="output">n/a</td> <td class="ref">566</td> <td class="result">n/a</td>
+			<td class="locale">ch</td> <td class="format">0000</td> <td class="input">566</td> <td class="output">n/a</td> <td class="ref">0566</td> <td class="result">n/a</td>
 	    </tr>
 		<tr class="formatTextTest"> <td class="id">formatTextTestCh9</td>
 			<td class="locale">ch</td> <td class="format">0</td> <td class="input">566</td> <td class="output">n/a</td> <td class="ref">566</td> <td class="result">n/a</td>

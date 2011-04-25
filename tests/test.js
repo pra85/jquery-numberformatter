@@ -1,24 +1,6 @@
 $(document).ready(function() {
 
 	var testResultsDiv = $(".testResults");
-	
-	/*var output = $.formatNumber("1.01", {
-		format: "#.0%"
-	});
-	alert(output);
-	output = $.parseNumber(output.toString(), "#.0%");
-	output = $.formatNumber(output, {
-		format: "#.0%"
-	});
-	*/
-	
-	/*var output = '1.999';
-	output = $.formatNumber(output, {
-		format: '#.00',
-		round: false
-	});
-	
-	alert(output);*/
 
 	var formatTestsRun = 0;
 	var formatTestsFailed = 0;

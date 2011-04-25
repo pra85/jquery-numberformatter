@@ -335,6 +335,19 @@
 					groupCount = 0;
 				}
 			}
+			
+			// account for any pre-data 0's
+			if (onesFormat.length > onePortion.length) {
+				var padStart = onesFormat.indexOf('0');
+				if (padStart != -1) {
+					var padLen = onesFormat.length - padStart;
+					
+					// pad to left with 0's
+					while (onePortion.length < padLen) {
+						onePortion = '0' + onePortion;
+					}
+				}
+			}
 		}
 		
 		if (!onePortion && onesFormat.indexOf('0', onesFormat.length - 1) !== -1)

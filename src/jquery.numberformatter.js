@@ -443,5 +443,31 @@
 		nanForceZero: true,
 		round: true
 	};
+	
+	Number.prototype.toFixed = function(precision) {
+    	return $._roundNumber(this, precision);
+	};
+	
+	jQuery._roundNumber = function(number, decimalPlaces) {
+		var power = Math.pow(10, decimalPlaces || 0);
+    	var value = String(Math.round(number * power) / power);
+    	
+    	// ensure the decimal places are there
+    	if (decimalPlaces > 0) {
+    		var dp = value.indexOf(".");
+    		if (dp == -1) {
+    			value += '.';
+    			dp = 0;
+    		} else {
+    			dp = value.length - (dp + 1);
+    		}
+    		
+    		while (dp < decimalPlaces) {
+    			value += '0';
+    			dp++;
+    		}
+    	}
+    	return value;
+	};
 
  })(jQuery);

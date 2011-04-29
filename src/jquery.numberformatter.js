@@ -9,7 +9,7 @@
  * and GPL (GPL-LICENSE.txt) licenses.
  *
  * @author Michael Abernethy, Andrew Parry
- * @version 1.2.2-SNAPSHOT ($Id$)
+ * @version 1.2.2-RELEASE ($Id$)
  * 
  * Dependencies
  * 

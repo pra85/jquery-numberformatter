@@ -6,22 +6,18 @@
 	
 	<script type="text/javascript">
 	    $(document).ready(function () {
-			$('div').parseNumber({locale:"us", isPercentage: true});
-			$('div').formatNumber({format:"#.##%", locale:"us"});
-			
-			$('div').parseNumber({locale:"us", isPercentage: true});
-			$('div').formatNumber({format:"#.##%", locale:"us"});
+			$('div').formatNumber({format:"#.##", locale:"en_nl", isFullLocale: true});
 	    });
 	</script>
 </head>
 <body>
 	<p>
-		<a href="http://code.google.com/p/jquery-numberformatter/issues/detail?id=50">Issue #50</a>
+		<a href="http://code.google.com/p/jquery-numberformatter/issues/detail?id=50">Issue #53</a>
 	</p>
 	
 	<div>1.15</div>
 	<p>
-		Expected: 1.15%
+		Expected: 1.15
 	</p>
 </body>
 </html>

@@ -127,7 +127,7 @@
 		}
 	};
 
-	function formatCodes(locale) {
+	function formatCodes(locale, isFullLocale) {
 		if (nfLocales.size() == 0)
 			init();
 
@@ -135,7 +135,16 @@
          var dec = ".";
          var group = ",";
          var neg = "-";
-		 
+         
+         if (isFullLocale == false) {
+	         // Extract and convert to lower-case any language code from a real 'locale' formatted string, if not use as-is
+	         // (To prevent locale format like : "fr_FR", "en_US", "de_DE", "fr_FR", "en-US", "de-DE")
+	         if (locale.indexOf('_') != -1)
+				locale = locale.split('_')[1].toLowerCase();
+			 else if (locale.indexOf('-') != -1)
+				locale = locale.split('-')[1].toLowerCase();
+		}
+
 		 // hashtable lookup to match locale with codes
 		 var codesIndex = nfLocales.get(locale);
 		 if (codesIndex) {
@@ -201,7 +210,7 @@
 	 */
 	jQuery.formatNumber = function(numberString, options){
 		var options = jQuery.extend({}, jQuery.fn.formatNumber.defaults, options);
-		var formatData = formatCodes(options.locale.toLowerCase());
+		var formatData = formatCodes(options.locale.toLowerCase(), options.isFullLocale);
 		
 		var dec = formatData.dec;
 		var group = formatData.group;
@@ -254,7 +263,7 @@
 	 */
 	jQuery._formatNumber = function(number, options, suffix, prefix, negativeInFront) {
 		var options = jQuery.extend({}, jQuery.fn.formatNumber.defaults, options);
-		var formatData = formatCodes(options.locale.toLowerCase());
+		var formatData = formatCodes(options.locale.toLowerCase(), options.isFullLocale);
 		
 		var dec = formatData.dec;
 		var group = formatData.group;
@@ -421,7 +430,7 @@
 	 */
 	jQuery.parseNumber = function(numberString, options) {
 		var options = jQuery.extend({}, jQuery.fn.parseNumber.defaults, options);
-		var formatData = formatCodes(options.locale.toLowerCase());
+		var formatData = formatCodes(options.locale.toLowerCase(), options.isFullLocale);
 
 		var dec = formatData.dec;
 		var group = formatData.group;
@@ -459,7 +468,8 @@
 	jQuery.fn.parseNumber.defaults = {
 		locale: "us",
 		decimalSeparatorAlwaysShown: false,
-		isPercentage: false
+		isPercentage: false,
+		isFullLocale: false
 	};
 
 	jQuery.fn.formatNumber.defaults = {
@@ -467,7 +477,8 @@
 		locale: "us",
 		decimalSeparatorAlwaysShown: false,
 		nanForceZero: true,
-		round: true
+		round: true,
+		isFullLocale: false
 	};
 	
 	Number.prototype.toFixed = function(precision) {

@@ -188,6 +188,18 @@
 		<tr class="formatNumberTest" title="Issue #44"> <td class="id">formatNumberTest12</td>
 			<td class="locale">us</td> <td class="format">000,000,000</td> <td class="input">000000000</td> <td class="output">n/a</td> <td class="ref">000,000,000</td> <td class="result">n/a</td>
 		</tr>
+		
+		<!-- Issue 47 -->
+		<tr class="formatNumberTest" title="Issue #47"> <td class="id">formatNumberTest13</td>
+			<td class="locale">us</td> <td class="format">#.####%</td> <td class="input">0.0333456</td> <td class="output">n/a</td> <td class="ref">3.3346%</td> <td class="result">n/a</td>
+		</tr>
+		<tr class="formatNumberTest" title="Issue #47"> <td class="id">formatNumberTest14</td>
+			<td class="locale">us</td> <td class="format">#.####%</td> <td class="input">0.0333456</td> <td class="output">n/a</td> <td class="ref">3.3345%</td> <td class="result">n/a</td>
+			<td class="round">false</td>
+		</tr>
+		<tr class="formatNumberTest" title="Issue #47"> <td class="id">formatNumberTest15</td>
+			<td class="locale">us</td> <td class="format">#.#####%</td> <td class="input">0.0333456</td> <td class="output">n/a</td> <td class="ref">3.33456%</td> <td class="result">n/a</td>
+		</tr>
 	</table>
 	
 	<h2>German Locale</h2>
@@ -437,6 +449,14 @@
 	    </tr>
 		<tr class="parseTest"> <td class="id">parseTest8</td>
 			<td class="locale">en</td> <td class="input">23.42%</td> <td class="output">n/a</td> <td class="ref">0.2342</td> <td class="result">n/a</td>
+	    </tr>
+	    
+	    <!-- Issue #47 -->
+	    <tr class="parseTest"> <td class="id">parseTest9</td>
+			<td class="locale">en</td> <td class="input">3.33%</td> <td class="output">n/a</td> <td class="ref">0.0333</td> <td class="result">n/a</td>
+	    </tr>
+	    <tr class="parseTest"> <td class="id">parseTest10</td>
+			<td class="locale">en</td> <td class="input">3.33456%</td> <td class="output">n/a</td> <td class="ref">0.0333456</td> <td class="result">n/a</td>
 	    </tr>
 	</table>
 	

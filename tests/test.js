@@ -43,11 +43,14 @@ $(document).ready(function() {
 		var ref = $(this).find(".ref").text();
 		var result = $(this).find(".result");
 		var nanForceZero = $(this).find(".nanForceZero").text();
+		var round = $(this).find(".round").text();
 		
 		// apply formatting
 		output.text(input);
 		if (format && locale && nanForceZero)
 			output.formatNumber({ format: format, locale: locale, nanForceZero: nanForceZero == 'true' });
+		else if (format && locale && round)
+			output.formatNumber({format:format, locale:locale, round:round});
 		else if (format && locale)
 			output.formatNumber({format:format, locale:locale});
 		else if (format)

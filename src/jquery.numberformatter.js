@@ -444,7 +444,13 @@
 		var number = new Number(validText);
 		if (hasPercent) {
 			number = number / 100;
-			number = number.toFixed(validText.length-1);
+			var decimalPos = validText.indexOf('.');
+			if (decimalPos != -1) {
+				var decimalPoints = validText.length - decimalPos - 1;
+				number = number.toFixed(decimalPoints + 2);
+			} else {
+				number = number.toFixed(validText.length - 1);
+			}
 		}
 
 		return number;

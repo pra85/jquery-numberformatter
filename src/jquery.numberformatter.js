@@ -458,7 +458,7 @@
 	};
 	
 	Number.prototype.toFixed = function(precision) {
-    	return $._roundNumber(this, precision);
+    	return jQuery._roundNumber(this, precision);
 	};
 	
 	jQuery._roundNumber = function(number, decimalPlaces) {

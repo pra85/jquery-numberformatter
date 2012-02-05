@@ -132,5 +132,26 @@ $(document).ready(function() {
 		elementTestsRun++;
 	});
 	
+	// display the results
 	testResultsDiv.html("<p>Format Tests: " + (formatTestsRun - formatTestsFailed) + "/" + formatTestsRun + "</p> <p>Parse Tests: " + (parseTestRun - parseTestFailed) + "/" + parseTestRun + "</p> <p>Element Tests: " + (elementTestsRun - elementTestsFailed) + "/" + elementTestsRun + "</p>");
+	
+	// colour the results
+	if (formatTestsFailed == 0) {
+		testResultsDiv.children('p:eq(0)').css('background-color', 'green');
+		testResultsDiv.children('p:eq(0)').css('color', 'white');
+	} else {
+		testResultsDiv.children('p:eq(0)').css('background-color', 'red');
+	}
+	if (parseTestFailed == 0) {
+		testResultsDiv.children('p:eq(1)').css('background-color', 'green');
+		testResultsDiv.children('p:eq(1)').css('color', 'white');
+	} else {
+		testResultsDiv.children('p:eq(1)').css('background-color', 'green');
+	}
+	if (elementTestsFailed == 0) {
+		testResultsDiv.children('p:eq(2)').css('background-color', 'green');
+		testResultsDiv.children('p:eq(2)').css('color', 'white');
+	} else {
+		testResultsDiv.children('p:eq(2)').css('background-color', 'green');
+	}
 });

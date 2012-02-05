@@ -336,15 +336,21 @@
 				}
 			}
 			
-			// account for any pre-data 0's
+			// account for any pre-data padding
 			if (onesFormat.length > onePortion.length) {
 				var padStart = onesFormat.indexOf('0');
 				if (padStart != -1) {
 					var padLen = onesFormat.length - padStart;
 					
-					// pad to left with 0's
+					// pad to left with 0's or group char
+					var pos = onesFormat.length - onePortion.length - 1;
 					while (onePortion.length < padLen) {
-						onePortion = '0' + onePortion;
+						var padChar = onesFormat.charAt(pos);
+						// replace with real group char if needed
+						if (padChar == ',')
+							padChar = group;
+						onePortion = padChar + onePortion;
+						pos--;
 					}
 				}
 			}

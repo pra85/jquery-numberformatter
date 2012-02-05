@@ -180,8 +180,13 @@
 		<tr class="formatNumberTest"> <td class="id">formatNumberTest10</td>
 			<td class="locale">us</td> <td class="format">0#,##0.0</td> <td class="input">1000</td> <td class="output">n/a</td> <td class="ref">01,000.0</td> <td class="result">n/a</td>
 		</tr>
-		<tr class="formatNumberTest"> <td class="id">formatNumberTest10</td>
+		<tr class="formatNumberTest"> <td class="id">formatNumberTest11</td>
 			<td class="locale">us</td> <td class="format">0#,##0.0</td> <td class="input">1000000</td> <td class="output">n/a</td> <td class="ref">1,000,000.0</td> <td class="result">n/a</td>
+		</tr>
+		
+		<!-- Issue 44 -->
+		<tr class="formatNumberTest" title="Issue #44"> <td class="id">formatNumberTest12</td>
+			<td class="locale">us</td> <td class="format">000,000,000</td> <td class="input">000000000</td> <td class="output">n/a</td> <td class="ref">000,000,000</td> <td class="result">n/a</td>
 		</tr>
 	</table>
 	
@@ -254,6 +259,11 @@
 		<tr><td colspan="7">Issue #9</td></tr>
 		<tr class="formatTextTest"> <td class="id">formatTextDe13</td>
 			<td class="locale">de</td> <td class="format">#,##0.00 EUR</td> <td class="input">10000.1</td> <td class="output">n/a</td> <td class="ref">10.000,10 EUR</td> <td class="result">n/a</td>
+		</tr>
+		
+		<!-- Issue 44 -->
+		<tr class="formatNumberTest" title="Issue #44"> <td class="id">formatNumberTestDe1</td>
+			<td class="locale">de</td> <td class="format">000,000,000</td> <td class="input">000000000</td> <td class="output">n/a</td> <td class="ref">000.000.000</td> <td class="result">n/a</td>
 		</tr>
 	</table>
 	

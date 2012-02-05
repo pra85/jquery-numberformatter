@@ -1,0 +1,27 @@
+<html>
+<head>
+	<script type="text/javascript" src="../../lib/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="../../lib/jshashtable-2.1.js"></script>
+	<script type="text/javascript" src="../../src/jquery.numberformatter.js"></script>
+	
+	<script type="text/javascript">
+	    $(document).ready(function () {
+			$('div').parseNumber({locale:"us", isPercentage: true});
+			$('div').formatNumber({format:"#.##%", locale:"us"});
+			
+			$('div').parseNumber({locale:"us", isPercentage: true});
+			$('div').formatNumber({format:"#.##%", locale:"us"});
+	    });
+	</script>
+</head>
+<body>
+	<p>
+		<a href="http://code.google.com/p/jquery-numberformatter/issues/detail?id=47">Issue #47</a>
+	</p>
+	
+	<div>1.15</div>
+	<p>
+		Expected: 1.15%
+	</p>
+</body>
+</html>

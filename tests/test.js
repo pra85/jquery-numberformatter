@@ -79,9 +79,14 @@ $(document).ready(function() {
 		var output = $(this).find(".output");
 		var ref = parseFloat($(this).find(".ref").text());
 		var result = $(this).find(".result");
+		var isPercentage = $(this).find(".isPercentage").text();
+		if (isPercentage == 'true')
+			isPercentage = true;
+		else
+			isPercentage = false;
 		
 		// parse to number
-		var number = input.parseNumber({locale: locale}, false);
+		var number = input.parseNumber({locale: locale, isPercentage: isPercentage}, false);
 		output.text(number.toString());
 		
 		// read number back in as float, check against ref

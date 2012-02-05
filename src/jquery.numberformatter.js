@@ -435,7 +435,7 @@
 		numberString = numberString.replace(dec,".").replace(neg,"-");
 		var validText = "";
 		var hasPercent = false;
-		if (numberString.charAt(numberString.length-1)=="%")
+		if (numberString.charAt(numberString.length - 1) == "%" || options.isPercentage == true)
 			hasPercent = true;
 		for (var i=0; i<numberString.length; i++) {
 			if (valid.indexOf(numberString.charAt(i))>-1)
@@ -458,7 +458,8 @@
 
 	jQuery.fn.parseNumber.defaults = {
 		locale: "us",
-		decimalSeparatorAlwaysShown: false
+		decimalSeparatorAlwaysShown: false,
+		isPercentage: false
 	};
 
 	jQuery.fn.formatNumber.defaults = {
